@@ -1,0 +1,45 @@
+author: ByCubed7
+description: A commissioned plugin integrating McMMO, LuckPerms and TAB so that the max skills acquired will be displayed as badges.
+
+version: 1.1
+api-version: 1.18
+
+# Impo
+main: io.github.bycubed7.mmontab.MMOnTAB
+name: MMOnTAB
+prefix: mmontab
+
+depend: [mcMMO, TAB, LuckPerms]
+softdepend: [LuckPerms]
+load: POSTWORLD
+
+# Permissions
+permissions:
+    mmontab.*:
+        description: Gives access to all MMOnTAB commands
+
+        children:
+            MMOnTAB.reincarnate: true
+
+    mmontab.reincarnate:
+        description: Allows members to use the Reincarnate command.
+        default: true
+        children:
+            mmontab.reincarnate.force: true
+
+    mmontab.reincarnate.force:
+        description: Allows members to FORCE the Reincarnate command.
+        default: false
+
+# Commands
+commands:
+    reincarnate:
+        description: Allows members to rewind their max level to achieve a higher badge.
+        permission: mmontab.reincarnate
+        #aliases: [re]
+        description: Reincarnate your skills to earn a better badge to display.
+        usage: |
+            /reincarnate <skill>
+            Example: /reincarnate Axes - Reincarnate your axes skill.
+            Example: /reincarnate Fishing - Reincarnate your fishing skill.
+            Note: The skill must be level capped to use.

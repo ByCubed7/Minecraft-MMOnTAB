@@ -1,0 +1,125 @@
+
+# - - / Contents \ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# General           - Badge grouping, max displayment, ect.
+# Reincarnatation   - Reincarnatation settings.
+# Badge             - Badge formatting.
+# Variables         - Varibles, names use and such.
+
+
+# - - / General \ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# The max amount of badges that will be displayed at a time.
+# Set to 0, or 18 to display all badges.
+# Default: 3
+badgeCount: 3
+
+# Should the plugin group badges together? When a player gets all of the combat
+# levels to max, the plugin will award the combat badge, rather than all 5 of
+# the other skill badges.
+# Default: true
+badgeGrouping: true
+
+# Where should I place the badges?
+# 0: HIDE
+# 1: tabprefix  2: tabsuffix  3: belowname  4: abovename
+# Default: 0
+badgePlace: 0
+
+
+# - - / Reincarnatation \ - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# - The percentage the plugin should set when the plugin reincarnate a player
+# Default: 20  for 1/5 of the max level
+reincarnatePercent: 20
+
+
+# - - / Badges \ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# The plugin uses the level cap set by McMMO~
+# See Variables below for how $s is used
+
+# - Should the plugin give players who have reached the Level Cap a custom
+# badge?
+# Default: [Mx&s]
+# Set to 0 to disable
+maxBadge: [Mx&s]
+
+# - Should the plugin give players who have reincarnated a skill a custom
+# badge?
+# Default: [Re&s]
+# Set to 0 to disable
+reincarnateBadge: [Re&s]
+
+# - Should the plugin give players who have maxed out a reincarnated skill a
+# custom badge?
+# Default: [MR&s]
+# Set to 0 to disable
+maxReincarnateBadge: [MR&s]
+
+# Colors
+# See: https://www.digminecraft.com/lists/color_list_pc.php !
+# The plugin automatically adds/replaces with §
+
+# The color of the max badge
+# Default: &a
+maxColor: §a
+
+# The color of the reincarnatation badge
+# Default: &e
+reincarnateColor: §e
+
+# The color of the maxed reincarnatation badge
+# Default: &5
+maxReincarnateColor: §5
+
+
+# - - / Variables \ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Names and variables that the plugin uses for badges.
+
+# '$S' will be replaced with the full name of the skill
+# '$s' will be replaced with a small abbreviation of the skills name
+
+skills:
+    name:
+        acrobatics:     Acrobatics
+        alchemy:        Alchemy
+        archery:        Archery
+        axes:           Axes
+        excavation:     Excavation
+        fishing:        Fishing
+        herbalism:      Herbalism
+        mining:         Mining
+        repair:         Repair
+        salvage:        Salvage
+        smelting:       Smelting
+        swords:         Swords
+        taming:         Taming
+        unarmed:        Unarmed
+        woodcutting:    Woodcutting
+    abbr:
+        acrobatics:     Acro
+        alchemy:        Alch
+        archery:        Arch
+        axes:           Axes
+        excavation:     Exca
+        fishing:        Fish
+        herbalism:      Herb
+        mining:         Mine
+        repair:         Repr
+        salvage:        Salv
+        smelting:       Smlt
+        swords:         Swrd
+        taming:         Tame
+        unarmed:        UnAr
+        woodcutting:    Wood
+
+categories:
+    name:
+        combat:     Combat
+        gathering:  Gathering
+        other:      Other
+    abbr:
+        combat:     CMBT
+        gathering:  GTHR
+        other:      OTHR

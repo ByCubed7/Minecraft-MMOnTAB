@@ -58,17 +58,13 @@ public class MMOnTAB extends JavaPlugin {
 
 		// Update all the players present
 		// When /reload is called for example
-		for (Player player : Bukkit.getOnlinePlayers())
-			BadgeManager.update(player);
-
+		// Using a schedular so that it runs once ALL plugins are loaded.
+		getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable() {
+			@Override
+			public void run() {
+				for (Player player : Bukkit.getOnlinePlayers())
+					BadgeManager.update(player);
+			}
+		});
 	}
-
-//	public static boolean GetLuckPerms() {
-//		RegisteredServiceProvider<LuckPerms> provider = Bukkit.getServicesManager().getRegistration(LuckPerms.class);
-//		if (provider != null) {
-//			instance.luckPerms = provider.getProvider();
-//			return true;
-//		}
-//		return false;
-//	}
 }
